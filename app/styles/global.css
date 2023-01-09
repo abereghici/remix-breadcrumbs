@@ -1,0 +1,35 @@
+:root {
+  --spacing: 12px;
+}
+
+.crumbWrapper {
+  display: inline;
+}
+
+.crumbWrapper:not(:first-of-type) {
+  margin-left: var(--spacing);
+}
+
+.crumbWrapper::before {
+  content: '';
+  display: inline-block;
+  transform: rotate(15deg);
+  border-right: 1px solid;
+  margin-right: var(--spacing);
+  height: 0.8em;
+}
+
+.crumbLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.crumbLink:hover {
+  text-decoration: revert;
+}
+
+.breadcrumbList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
